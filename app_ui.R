@@ -18,6 +18,13 @@ bChart_sidebar_content <- sidebarPanel(
         label = "Year",
         choices = tail(df$year),
         selected = "yr"
+    ),
+    color_input <- selectInput(
+        "color",
+        label = "Color",
+        choices = list("Green" = "#669933", "Yellow" = "#FFCC66",
+                       "Cyan" = "#00FFFF", "Magenta" = "#FF00FF", 
+                       "Blue Bell" = "#A5A3C1", "Desire" = "#EA3C53")
     )
 )
 

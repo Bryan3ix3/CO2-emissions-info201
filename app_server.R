@@ -118,7 +118,8 @@ server <- function(input, output) {
             labs(x = "Country", title = paste0("CO2 emissions by country in ", 
                                                yr), 
                  y = "CO2 emissions (mil. tonnes)") + 
-            scale_fill_discrete(name = "Industry most emissions")  
+            scale_fill_discrete(name = "Industry most emissions") +
+            scale_fill_manual(values = input$color)
         ggplotly(my_plot)
     })
     

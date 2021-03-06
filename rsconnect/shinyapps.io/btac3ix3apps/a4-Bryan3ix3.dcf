@@ -1,0 +1,13 @@
+name: a4-Bryan3ix3
+title: a4-Bryan3ix3
+username:
+account: btac3ix3apps
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3745675
+bundleId: 4307980
+url: https://btac3ix3apps.shinyapps.io/a4-Bryan3ix3/
+when: 1615010466.70096
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: LICENSE|README.md|static.R
