@@ -11,22 +11,29 @@ intro_panel <- tabPanel(
     textOutput("text_five")
 )
 
-scatter_sidebar_content <- sidebarPanel(
-    textInput("search", label = "Find a State", value = "")
+
+bChart_sidebar_content <- sidebarPanel(
+    year_input <- selectInput(
+        "year_in",
+        label = "Year",
+        choices = tail(df$year),
+        selected = "yr"
+    )
 )
 
-scatter_main_content <- mainPanel(
-    textInput("search", label = "Find a State", value = "")
-    #plotlyOutput("scatter")
+bChart_main_content <- mainPanel(
+    #textInput("search", label = "Find a State", value = "")
+    plotlyOutput("bar_chart"),
+    textOutput("text_chart")
 )
-scatter_panel <- tabPanel(
+bChart_panel <- tabPanel(
     "Chart",
     sidebarLayout(
-    # Display `scatter_sidebar_content`
-    scatter_sidebar_content,
-    
-    # Display  `scatter_main_content`
-    scatter_main_content
+        # Display `scatter_sidebar_content`
+        bChart_sidebar_content,
+        
+        # Display  `scatter_main_content`
+        bChart_main_content
     )
  
 )
@@ -35,5 +42,5 @@ scatter_panel <- tabPanel(
 ui <- navbarPage(
     "CO2 Emisssions Analysis",
     intro_panel,
-    scatter_panel
+    bChart_panel
 )
